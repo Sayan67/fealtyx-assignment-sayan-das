@@ -1,33 +1,72 @@
 # 🐞 Bug/Task Tracker
 
-A lightweight bug & task tracker built with Next.js, styled-components, and Radix UI.
+A modern, role-based task and bug tracking application built with **Next.js**, **Zustand**, **styled-components**, and **Radix UI** — featuring developer/manager roles, real-time task management, filtering, time tracking, and local persistence.
 
-## 🧪 Demo
-
-🔗 [Live Site](https://bug-tracker-self.vercel.app/)
-
-🎥 [Demo Video](https://loom.com/...link...)
+---
 
 ## ✨ Features
 
-- 👥 Mock login (Developer & Manager roles)
-- 📊 Dashboards with tasks & trend line
-- ✅ Task creation, editing, filtering
-- ⏱️ Time tracker per task
-- 🔄 Bug approval flow (Dev → Manager)
+- 🔐 **Mock Authentication** with role-based access
+- 📋 **Task Management**: Create, edit, delete, close, approve, reopen
+- 🔍 **Filtering & Sorting**: by status and priority
+- ⏱ **Time Tracking**: Start/stop timer, calculates total time
+- 💾 **LocalStorage Persistence**: Tasks persist across refresh/sessions
+- 🎨 **Sleek UI**: Built with styled-components and Radix UI
 
-## 🚀 Tech Stack
+---
 
-- Next.js App Router
-- styled-components (SSR configured)
-- Radix UI components
-- Zustand for global state
-- Chart.js for trend graphs
+## 👥 Roles & Credentials
 
-## 🛠️ Run Locally
+| Role      | Username      | Password     |
+|-----------|---------------|--------------|
+| Manager   | `SayanManager`| `manager123` |
+| Developer | `SayanDev`    | `devpass`    |
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/sayandas123/bug-tracker
-cd bug-tracker
+git clone https://github.com/Sayan67/fealtyx-assignment-sayan-das
+cd fealtyx-assignment-sayan-das
+```
+### 2. Install Dependencies
+
+```bash
 npm install
+```
+### 3. Start the Development Server
+
+```bash
 npm run dev
+```
+### 4. Open in Browser
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+### 5. Login with Credentials
+- For **Manager**: 
+  - Username: `SayanManager`
+  - Password: `manager123`
+- For **Developer**:
+  - Username: `SayanDev`
+  - Password: `devpass`
+### 6. Explore Features
+- **Manager**: Create tasks, approve/reopen tasks
+- **Developer**: View assigned tasks, start/stop timers, update task status
+### 7. View Task List
+- Navigate to the **Your Work** page to see all tasks
+### 8. Filter Tasks
+- Use the filter options to view tasks by status (Open, In Progress, Closed) and priority (High, Medium, Low)
+### 9. Time Tracking
+- Start/stop timers for tasks to track time spent
+### 10. LocalStorage Persistence
+- All tasks and timer data are saved in localStorage, so they persist across page refreshes and sessions
+### 11. Logout
+- Click the **Logout** button to end your session
+---
+## 📄 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+# 📧 Contact
+email - sayandas.6523@gmail.com
