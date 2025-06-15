@@ -4,7 +4,7 @@ A lightweight bug & task tracker built with Next.js, styled-components, and Radi
 
 ## 🧪 Demo
 
-🔗 [Live Site](https://bugtracker.vercel.app)
+🔗 [Live Site](https://bug-tracker-self.vercel.app/)
 
 🎥 [Demo Video](https://loom.com/...link...)
 
