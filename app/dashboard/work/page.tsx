@@ -3,18 +3,19 @@
 import { useAuthStore } from "@/store/useAuthStore";
 import { useTaskStore, TaskStatus, TaskPriority } from "@/store/useTaskStore";
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import TaskListComp from "@/components/pages/work/TaskList";
 import CreateTask from "@/components/pages/work/CreateTask";
 import { DropdownFilter } from "@/components/ui/DropDown";
+import { useRouter } from "next/navigation";
 
 const FilterBarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  padding: 0.5rem;
+  margin-top: 1rem;
   border-radius: 0.5rem;
   gap: 1rem;
   flex-wrap: wrap;
@@ -35,6 +36,7 @@ const Filters = styled.div`
 export default function WorkPage() {
   const { user } = useAuthStore();
   const { tasks, createTask, filterByStatus } = useTaskStore();
+  const router = useRouter();
 
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -73,6 +75,12 @@ export default function WorkPage() {
     }
   };
 
+  useEffect(() => {
+    if (!user) {
+      router.replace("/login");
+    }
+  }, [user, router]);
+
   return (
     <div>
       <h1 style={{ fontSize: "1.5rem", fontWeight: 600 }}>Your Tasks</h1>
@@ -106,7 +114,11 @@ export default function WorkPage() {
             label="Sort"
             options={["none", "priority-high", "priority-low"]}
             value={sortBy}
-            onChange={(val) => setSortBy(val == "none" ? "" : (val as "priority-high" | "priority-low"))}
+            onChange={(val) =>
+              setSortBy(
+                val == "none" ? "" : (val as "priority-high" | "priority-low")
+              )
+            }
           />
         </Filters>
       </FilterBarContainer>

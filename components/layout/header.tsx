@@ -171,9 +171,9 @@ function HeaderComp() {
         />
         <HeadingTitle>
           {headingMap[path]
-            ? headingMap[path].icon && headingMap[path].icon
+            ? headingMap[path]?.icon && headingMap[path].icon
             : null}
-          {headingMap[path].name || "Dashboard"}
+          {headingMap[path]?.name || "Dashboard"}
         </HeadingTitle>
       </MobileNav>
       {hamOpen && (

@@ -12,8 +12,8 @@ interface AuthState {
 }
 
 const users = {
-  manager: { password: "manager123", role: "manager" },
-  dev1: { password: "devpass", role: "developer" },
+  SayanManager: { password: "manager123", role: "manager" },
+  SayanDev: { password: "devpass", role: "developer" },
 };
 
 export const useAuthStore = create<AuthState>()(
